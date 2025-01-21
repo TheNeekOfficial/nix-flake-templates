@@ -5,7 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = {nixpkgs}: let
+  outputs = {
+    self, # Necessary for direnv
+    nixpkgs,
+  }: let
     forAllSystems = nixpkgs.lib.genAttrs ["x86_64-linux" "aarch64-darwin"];
     pkgs = forAllSystems (system: nixpkgs.legacyPackages.${system});
     pythonPackages = ps:
