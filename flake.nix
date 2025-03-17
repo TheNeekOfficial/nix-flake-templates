@@ -11,6 +11,10 @@
         path = ./python;
         description = "Basic template for python development w/ pandas";
       };
+      rust = {
+        path = ./rust;
+        description = "Basic template for rust development";
+      };
     };
   };
 }
