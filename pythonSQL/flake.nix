@@ -43,7 +43,6 @@
         ];
         packages = [
           (pkgs.python3.withPackages pythonPackages)
-          pkgs.sqlite
         ];
       };
     });
