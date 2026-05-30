@@ -20,8 +20,6 @@
           packages = with pkgs.${system}; [
             (python3.withPackages pythonPackages)
             bash
-            unzip
-            gnumake
             gnugrep
           ];
         };
